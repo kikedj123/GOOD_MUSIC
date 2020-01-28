@@ -1,0 +1,46 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <img src="/assets/img/1.jpg" class="carrusel">
+    </div>
+    <div class="carousel-item" *ngFor="let carruseles of carrusel">
+    <img [src]="carruseles.img" class="carrusel">
+    </div>
+
+
+
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<br>
+<br>
+<div class="card-columns ">
+
+<div class=" center" *ngFor="let circles of circle;let i=index">
+
+
+    <a [routerLink]="['/evento',i]"  >
+      <img [src]="circles.img" class="rounded-circle" [alt]="circle.nombre" width="304" height="236">
+      </a>
+
+
+ </div>
+
+</div>
+<br>
+
+
